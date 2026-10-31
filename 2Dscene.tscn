@@ -1,11 +1,162 @@
 [gd_scene format=3 uid="uid://dkkn03k47arkh"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_x58ut"]
+[ext_resource type="Texture2D" uid="uid://cxmq66e8y405l" path="res://ducky_3_spritesheet.png" id="1_vqkv7"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4u5wd"]
+atlas = ExtResource("1_vqkv7")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jbxr2"]
+atlas = ExtResource("1_vqkv7")
+region = Rect2(32, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3fbhc"]
+atlas = ExtResource("1_vqkv7")
+region = Rect2(64, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lhf3m"]
+atlas = ExtResource("1_vqkv7")
+region = Rect2(96, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tx1jl"]
+atlas = ExtResource("1_vqkv7")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g3bni"]
+atlas = ExtResource("1_vqkv7")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_smop3"]
+atlas = ExtResource("1_vqkv7")
+region = Rect2(0, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e2f3n"]
+atlas = ExtResource("1_vqkv7")
+region = Rect2(32, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jo4dv"]
+atlas = ExtResource("1_vqkv7")
+region = Rect2(64, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pnpxn"]
+atlas = ExtResource("1_vqkv7")
+region = Rect2(96, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uuxjb"]
+atlas = ExtResource("1_vqkv7")
+region = Rect2(128, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cpr0h"]
+atlas = ExtResource("1_vqkv7")
+region = Rect2(160, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1kw0v"]
+atlas = ExtResource("1_vqkv7")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_86ptq"]
+atlas = ExtResource("1_vqkv7")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cc60h"]
+atlas = ExtResource("1_vqkv7")
+region = Rect2(64, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i4uew"]
+atlas = ExtResource("1_vqkv7")
+region = Rect2(96, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vfbdk"]
+atlas = ExtResource("1_vqkv7")
+region = Rect2(128, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7drqv"]
+atlas = ExtResource("1_vqkv7")
+region = Rect2(160, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_i8ep6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4u5wd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jbxr2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3fbhc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lhf3m")
+}],
+"loop": 1,
+"name": &"idle-bounce",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tx1jl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g3bni")
+}],
+"loop": 1,
+"name": &"idle-normal",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_smop3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e2f3n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jo4dv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pnpxn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uuxjb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cpr0h")
+}],
+"loop": 1,
+"name": &"walk-bounce",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1kw0v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_86ptq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cc60h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i4uew")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vfbdk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7drqv")
+}],
+"loop": 1,
+"name": &"walk-normal",
+"speed": 5.0
+}]
 
 [node name="Node2D" type="Node2D" unique_id=1595614687]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1568617603]
-sprite_frames = SubResource("SpriteFrames_x58ut")
+sprite_frames = SubResource("SpriteFrames_i8ep6")
+animation = &"idle-bounce"
+frame_progress = 0.35018274
 
 [node name="Area2D" type="Area2D" parent="." unique_id=983059053]
 
