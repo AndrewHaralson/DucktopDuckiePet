@@ -161,7 +161,7 @@ script = ExtResource("1_4u5wd")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=644313234]
 texture_filter = 1
-position = Vector2(-2.6666667, -5.3333335)
+position = Vector2(-2.666666, -5.333334)
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_udmtx")
 animation = &"walk-normal"
