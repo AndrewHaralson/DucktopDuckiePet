@@ -165,6 +165,8 @@ position = Vector2(-2.6666667, -5.3333335)
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_udmtx")
 animation = &"walk-normal"
+frame = 3
+frame_progress = 0.48158547
 centered = false
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1951022957]
