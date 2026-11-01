@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://dkkn03k47arkh"]
 
+[ext_resource type="Script" uid="uid://bc3nlpcvpu7ux" path="res://scriptForDuckie.gd" id="1_4u5wd"]
 [ext_resource type="Texture2D" uid="uid://cxmq66e8y405l" path="res://ducky_3_spritesheet.png" id="1_vqkv7"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4u5wd"]
@@ -74,7 +75,7 @@ region = Rect2(128, 32, 32, 32)
 atlas = ExtResource("1_vqkv7")
 region = Rect2(160, 32, 32, 32)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_i8ep6"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_udmtx"]
 animations = [{
 "frames": [{
 "duration": 1.0,
@@ -91,7 +92,7 @@ animations = [{
 }],
 "loop": 1,
 "name": &"idle-bounce",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -102,7 +103,7 @@ animations = [{
 }],
 "loop": 1,
 "name": &"idle-normal",
-"speed": 5.0
+"speed": 4.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -125,7 +126,7 @@ animations = [{
 }],
 "loop": 1,
 "name": &"walk-bounce",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -148,16 +149,27 @@ animations = [{
 }],
 "loop": 1,
 "name": &"walk-normal",
-"speed": 5.0
+"speed": 8.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e3awi"]
+size = Vector2(64, 64)
+
 [node name="Node2D" type="Node2D" unique_id=1595614687]
+scale = Vector2(3, 3)
+script = ExtResource("1_4u5wd")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1568617603]
-sprite_frames = SubResource("SpriteFrames_i8ep6")
-animation = &"idle-bounce"
-frame_progress = 0.35018274
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=644313234]
+texture_filter = 1
+position = Vector2(-2.6666667, -5.3333335)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_udmtx")
+animation = &"walk-normal"
+centered = false
 
-[node name="Area2D" type="Area2D" parent="." unique_id=983059053]
+[node name="Area2D" type="Area2D" parent="." unique_id=1951022957]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=432408816]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=176435105]
+visible = false
+position = Vector2(31.999996, 32)
+shape = SubResource("RectangleShape2D_e3awi")
