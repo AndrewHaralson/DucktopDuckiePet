@@ -126,7 +126,7 @@ animations = [{
 }],
 "loop": 1,
 "name": &"walk-bounce",
-"speed": 10.0
+"speed": 6.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -149,7 +149,7 @@ animations = [{
 }],
 "loop": 1,
 "name": &"walk-normal",
-"speed": 8.0
+"speed": 6.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e3awi"]
@@ -165,13 +165,11 @@ position = Vector2(-2.666666, -5.333334)
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_udmtx")
 animation = &"walk-normal"
-frame = 3
-frame_progress = 0.48158547
+frame_progress = 0.2044452
 centered = false
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1951022957]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=176435105]
-visible = false
 position = Vector2(31.999996, 32)
 shape = SubResource("RectangleShape2D_e3awi")
