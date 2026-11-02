@@ -8,3 +8,8 @@ Duckie Features:
  - Sits on command
  - Throwable! (very bouncy)
  - Waddles to the music
+
+Download at https://aduckieboi.itch.io/decktop-duck-pet
+
+Enjoy!
+Quack
