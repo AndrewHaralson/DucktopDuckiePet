@@ -2,6 +2,8 @@
 
 [ext_resource type="Script" uid="uid://bc3nlpcvpu7ux" path="res://scriptForDuckie.gd" id="1_4u5wd"]
 [ext_resource type="Texture2D" uid="uid://cxmq66e8y405l" path="res://ducky_3_spritesheet.png" id="1_vqkv7"]
+[ext_resource type="AudioStream" uid="uid://b5udlgp282dpi" path="res://quack-real.mp3" id="3_jbxr2"]
+[ext_resource type="AudioStream" uid="uid://cul16hpcsnt0s" path="res://ode.mp3" id="4_3fbhc"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4u5wd"]
 atlas = ExtResource("1_vqkv7")
@@ -92,7 +94,7 @@ animations = [{
 }],
 "loop": 1,
 "name": &"idle-bounce",
-"speed": 10.0
+"speed": 8.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -126,7 +128,7 @@ animations = [{
 }],
 "loop": 1,
 "name": &"walk-bounce",
-"speed": 6.0
+"speed": 8.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -149,27 +151,44 @@ animations = [{
 }],
 "loop": 1,
 "name": &"walk-normal",
-"speed": 6.0
+"speed": 8.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e3awi"]
-size = Vector2(64, 64)
+size = Vector2(53, 58)
 
 [node name="Node2D" type="Node2D" unique_id=1595614687]
-scale = Vector2(3, 3)
 script = ExtResource("1_4u5wd")
+
+[node name="DuckieMenu" type="PopupMenu" parent="." unique_id=372421649]
+oversampling_override = 1.0
+size = Vector2i(75, 75)
+theme_override_constants/h_separation = 0
+theme_override_constants/v_separation = 0
+theme_override_font_sizes/font_size = 20
+
+[node name="SizeMenu" type="PopupMenu" parent="." unique_id=680071742]
+oversampling_override = 1.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=644313234]
 texture_filter = 1
-position = Vector2(-2.666666, -5.333334)
-scale = Vector2(2, 2)
+scale = Vector2(6, 6)
 sprite_frames = SubResource("SpriteFrames_udmtx")
-animation = &"walk-normal"
-frame_progress = 0.2044452
+animation = &"walk-bounce"
+frame_progress = 0.5679155
 centered = false
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1951022957]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=176435105]
-position = Vector2(31.999996, 32)
+position = Vector2(103.5, 111)
+scale = Vector2(3, 3)
 shape = SubResource("RectangleShape2D_e3awi")
+
+[node name="QuackPlayer" type="AudioStreamPlayer" parent="." unique_id=588784976]
+stream = ExtResource("3_jbxr2")
+volume_db = -4.0
+
+[node name="MusicPlayer" type="AudioStreamPlayer" parent="." unique_id=896555373]
+stream = ExtResource("4_3fbhc")
+parameters/looping = true
